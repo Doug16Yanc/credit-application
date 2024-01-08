@@ -12,9 +12,9 @@ data class Credit(
     @Column(nullable = false, unique = true)
     val creditcode : UUID = UUID.randomUUID(),
     @Column(nullable = false)
-    val creditvalue : BigDecimal,
+    val creditValue : BigDecimal,
     @Column(nullable = false)
-    val dayFirstInstallment : LocalDate,
+    val dayFirstOfInstallment : LocalDate,
     @Column(nullable = false, unique = true)
     val numberOfInstallments : Int,
     @Enumerated

@@ -1,11 +1,12 @@
-package douglas.credit.application.system.services
+package douglas.credit.application.system.services.classes
 
 import douglas.credit.application.system.entities.Customer
 import douglas.credit.application.system.repositories.CustomerRepository
+import douglas.credit.application.system.services.interfaces.ICustomerService
 import org.springframework.stereotype.Service
 
 @Service
-class CustomerService(private val customerRepository: CustomerRepository) : ICustomerService{
+class CustomerService(private val customerRepository: CustomerRepository) : ICustomerService {
     override fun saveCustomer(customer: Customer): Customer =
         this.customerRepository.save(customer)
 

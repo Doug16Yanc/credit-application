@@ -1,14 +1,15 @@
-package douglas.credit.application.system.services
+package douglas.credit.application.system.services.classes
 
 import douglas.credit.application.system.entities.Credit
 import douglas.credit.application.system.repositories.CreditRepository
+import douglas.credit.application.system.services.interfaces.ICreditService
 import java.util.*
 
 class CreditService(
     private val creditRepository: CreditRepository,
     private val customerService: CustomerService
     ) : ICreditService {
-    override fun saveCredit(credit: Credit): Credit {
+    override fun save(credit: Credit): Credit {
         credit.apply { customer = customerService.findById(credit.customer?.id!!) }
         return this.creditRepository.save(credit)
     }

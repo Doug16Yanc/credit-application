@@ -1,6 +1,7 @@
 package douglas.credit.application.system.entities
 
 import jakarta.persistence.*
+import java.math.BigDecimal
 
 @Entity
 @Table(name = "Client")
@@ -9,18 +10,20 @@ data class Customer(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : Long? = null,
     @Column(nullable = false)
-    var firstName : String,
+    var firstName : String = "",
     @Column(nullable = false)
-    var lastName : String,
+    var lastName : String = "",
     @Column(nullable = false, unique = true)
-    val cpf : String,
-    @Column(nullable = false, unique = true)
-    var email : String,
+    val cpf : String = "",
     @Column(nullable = false)
-    var password : String,
+    var income : BigDecimal = BigDecimal.ZERO,
+    @Column(nullable = false, unique = true)
+    var email : String = "",
+    @Column(nullable = false)
+    var password : String = "",
     @Column(nullable = false)
     @Embedded
-    var address : Address,
+    var address : Address = Address("", ""),
     @Column(nullable = false)
     @OneToMany(fetch = FetchType.LAZY, cascade = arrayOf(CascadeType.REMOVE, CascadeType.PERSIST), mappedBy = "customer")
     var credits : List<Credit> = mutableListOf()

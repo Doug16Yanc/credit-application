@@ -1,10 +1,10 @@
-package douglas.credit.application.system.services
+package douglas.credit.application.system.services.interfaces
 
 import douglas.credit.application.system.entities.Credit
 import java.util.*
 
 interface ICreditService {
-    fun saveCredit(credit : Credit) : Credit
+    fun save(credit : Credit) : Credit
 
     fun findAllByCustomer(customer : Long) : List<Credit>
 

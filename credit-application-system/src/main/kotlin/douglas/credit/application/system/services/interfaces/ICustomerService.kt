@@ -1,4 +1,4 @@
-package douglas.credit.application.system.services
+package douglas.credit.application.system.services.interfaces
 
 import douglas.credit.application.system.entities.Customer
 
