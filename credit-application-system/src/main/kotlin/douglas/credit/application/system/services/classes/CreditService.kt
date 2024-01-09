@@ -3,8 +3,10 @@ package douglas.credit.application.system.services.classes
 import douglas.credit.application.system.entities.Credit
 import douglas.credit.application.system.repositories.CreditRepository
 import douglas.credit.application.system.services.interfaces.ICreditService
+import org.springframework.stereotype.Service
 import java.util.*
 
+@Service
 class CreditService(
     private val creditRepository: CreditRepository,
     private val customerService: CustomerService
