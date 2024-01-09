@@ -16,8 +16,9 @@ class CustomerService(private val customerRepository: CustomerRepository) : ICus
             throw RuntimeException("Id $id not found in this database")
         }
 
-
-    override fun deleteCustomer(id: Long) =
-        this.customerRepository.deleteById(id)
+    override fun deleteCustomer(id: Long){
+        val customer : Customer = this.findById(id)
+        this.customerRepository.delete(customer)
+    }
 
 }

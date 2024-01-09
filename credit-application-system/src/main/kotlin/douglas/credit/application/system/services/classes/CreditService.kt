@@ -23,6 +23,6 @@ class CreditService(
     val credit: Credit = (
             this.creditRepository.findByCreditCode(creditcode)
                 ?: throw RuntimeException("Credit code $creditcode not found.\n"))
-        return if (credit.customer?.id == customerId) credit else throw RuntimeException("Contact admin, please!\n")
+        return if (credit.customer?.id == customerId) credit else throw IllegalArgumentException("Contact admin, please!\n")
     }
 }
