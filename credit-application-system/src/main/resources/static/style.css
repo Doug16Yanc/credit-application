@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    padding :  0%;
+    margin : 0%;
+    box-sizing : border-box;
+}
+
+body {
+    width : 100%;
+    height: 100vh;
+    font-family : 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height : 100%;
+    background: black;
+    box-shadow : 0px 40px 20px -20px rgb(0. 0, 0, 0.5);
+    overflow: hidden;
+    padding: 10px 50px;
+}
+
+header nav {
+    position : relative;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+}
+
+header nav .logo{
+    width : 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+}
+
+header nav ul li {
+    padding: 3px 10px;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family : Arial;
+    color: white;
+    padding: 3px 10px;
+    transition: .3s linear;
+}
+
+header nav ul li a:hover {
+    color: #000;
+    background: yellow;
+    border-radius: 20px;
+}
+
+header nav .bi-list {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.home .home-slider .slide{
+    display : flex;
+    align-items : center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+.home .home-slider .wrapper .slide1{
+    background-image: url(img/bank.jpg);
+}
+
+
+.home .home-slider .slide1
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section {
+    width : 70%;
+    height: 65%;
+}
+
+section .content .img_bx {
+    width: 100%;
+    height: 100%;
+}
+
+section .content {
+    display: flex;
+    align-items : center;
+    justify-content: flex-start;
+}
+
+
+section .content .con h1 {
+    color : #fff;
+    font-size: 45px;
+    line-height: 50px;
+}
+
+section .content .con p{
+    width: 250px;
+    color : rgb(255, 255, 255, .8);
+    margin-top : 40px;
+    font-size: 18px;
+}
+
+section .content .con button {
+    color: #85480f;
+    background: linear-gradient(150deg, #cf8f35, #fff4ca, #85480f);
+    font-weight: 900;
+    font-size: 16px;
+    font-family: Arial;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-shadow: 2px 2px rgb(133, 72, 15, .5);
+    display: flex;
+    align-items : center;
+    transition: .3s linear;
+    cursor: pointer;
+    outline: none;
+}
+
+section .content .con button:hover{
+    color: #85480f;
+    background: linear-gradient(150deg, #cf8f35, #fff4ca, #85480f);
+
+}
+
+section .content .con button img {
+    width: 25px;
+    margin-left: 5px;
+}
+
+@media (min-width: 600px) {
+
+    main {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    button {
+        width: auto;
+    }
+}
