@@ -36,4 +36,5 @@ class CreditResource(
         val credit : Credit = this.creditService.findByCreditCode(customerId, creditCode)
         return ResponseEntity.status(HttpStatus.OK).body(CreditView(credit))
     }
+
 }

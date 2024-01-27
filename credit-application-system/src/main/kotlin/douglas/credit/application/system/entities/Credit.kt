@@ -24,4 +24,21 @@ data class Credit(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : Long? = null
-)
+) {
+    fun validateDayFirstOfInstallment() {
+        val today = LocalDate.now()
+        val minimumAllowedDate = today.plusMonths(3)
+
+        if (dayFirstOfInstallment.isBefore(minimumAllowedDate)) {
+            throw IllegalArgumentException("The first installment must be at least three months from now.")
+        }
+    }
+
+    fun validateNumberOfInstallments() {
+        if (numberOfInstallments > 48) {
+            throw IllegalArgumentException("The first installment must be at least three months from now.")
+
+        }
+    }
+}
+
